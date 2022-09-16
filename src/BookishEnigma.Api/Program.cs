@@ -2,9 +2,12 @@
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration();
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggerService();
+builder.Services.ConfigureDbContext(configuration);
+builder.Services.ConfigureRepositoryWrapper();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
