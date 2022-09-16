@@ -15,12 +15,14 @@ public class OwnerRepository : RepositoryBase<Owner>, IOwnerRepository
     {
         return FindAll()
             .OrderBy(ow => ow.Name)
+            .Include(ac => ac.Accounts)
             .ToList();
     }
 
     public Owner GetOwnerById(Guid ownerId)
     {
         return FindByCondition(owner => owner.Id.Equals(ownerId))
+                 .Include(ac => ac.Accounts)
                 .FirstOrDefault();
     }
 
