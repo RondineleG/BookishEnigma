@@ -9,4 +9,10 @@ public interface IOwnerRepository
 
     Owner GetOwnerWithDetails(Guid ownerId);
 
+    void CreateOwner(Owner owner);
+
+    void UpdateOwner(Owner owner);
+
+    void DeleteOwner(Owner owner);
+
 }

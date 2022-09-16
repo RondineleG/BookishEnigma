@@ -8,4 +8,3 @@ public class OwnerDto
     public string? Address { get; set; }
     public IEnumerable<AccountDto>? Accounts { get; set; }
 }
-
