@@ -2,7 +2,7 @@
 using NLog;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration();
+var configuration = builder.Configuration;
 builder.Services.ConfigureCors();
 builder.Services.ConfigureIISIntegration();
 builder.Services.ConfigureLoggerService();

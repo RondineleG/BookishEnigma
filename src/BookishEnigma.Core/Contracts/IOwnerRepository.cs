@@ -4,4 +4,5 @@ namespace BookishEnigma.Core.Contracts;
 
 public interface IOwnerRepository : IRepositoryBase<Owner>
 {
+    IEnumerable<Owner> GetAllOwners();
 }

@@ -10,4 +10,10 @@ public class OwnerRepository : RepositoryBase<Owner>, IOwnerRepository
     {
     }
 
+    public IEnumerable<Owner> GetAllOwners()
+    {
+        return FindAll()
+            .OrderBy(ow => ow.Name)
+            .ToList();
+    }
 }
