@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookishEnigma.Api", "src\BookishEnigma.Api\BookishEnigma.Api.csproj", "{734B09E2-AAA8-47A2-8F99-11536F2C8722}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookishEnigma.Core", "src\BookishEnigma.Core\BookishEnigma.Core.csproj", "{B30F3D78-6466-48F0-9AD9-5A69E2D0625D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookishEnigma.Infrastructure", "src\BookishEnigma.Infrastructure\BookishEnigma.Infrastructure.csproj", "{D33B8AAE-715E-451E-9733-224B1A685A5F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{734B09E2-AAA8-47A2-8F99-11536F2C8722}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{734B09E2-AAA8-47A2-8F99-11536F2C8722}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{734B09E2-AAA8-47A2-8F99-11536F2C8722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B30F3D78-6466-48F0-9AD9-5A69E2D0625D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B30F3D78-6466-48F0-9AD9-5A69E2D0625D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B30F3D78-6466-48F0-9AD9-5A69E2D0625D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B30F3D78-6466-48F0-9AD9-5A69E2D0625D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33B8AAE-715E-451E-9733-224B1A685A5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33B8AAE-715E-451E-9733-224B1A685A5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33B8AAE-715E-451E-9733-224B1A685A5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33B8AAE-715E-451E-9733-224B1A685A5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
