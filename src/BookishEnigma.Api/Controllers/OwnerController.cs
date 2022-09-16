@@ -1,20 +1,23 @@
-﻿using BookishEnigma.Core.Contracts;
+﻿using AutoMapper;
+using BookishEnigma.Core.Contracts;
+using BookishEnigma.Core.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookishEnigma.Api.Controllers;
 
 [Route("api/owner")]
 [ApiController]
-public class OwerController : ControllerBase
+public class OwnerController : ControllerBase
 {
-    private readonly ILoggerManager _logger;
+    private ILoggerManager _logger;
     private IRepositoryWrapper _repository;
+    private IMapper _mapper;
 
-    public OwerController(ILoggerManager logger,
-                          IRepositoryWrapper repository)
+    public OwnerController(ILoggerManager logger, IRepositoryWrapper repository, IMapper mapper)
     {
         _logger = logger;
         _repository = repository;
+        _mapper = mapper;
     }
 
     [HttpGet]
@@ -24,7 +27,8 @@ public class OwerController : ControllerBase
         {
             var owners = _repository.Owner.GetAllOwners();
             _logger.LogInfo($"Returned all owners from database.");
-            return Ok(owners);
+            var ownersResult = _mapper.Map<IEnumerable<OwnerDto>>(owners);
+            return Ok(ownersResult);
         }
         catch (Exception ex)
         {

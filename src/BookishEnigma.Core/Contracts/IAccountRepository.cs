@@ -1,7 +1,5 @@
-﻿using BookishEnigma.Core.Entities;
+﻿namespace BookishEnigma.Core.Contracts;
 
-namespace BookishEnigma.Core.Contracts;
-
-public interface IAccountRepository : IRepositoryBase<Account>
+public interface IAccountRepository
 {
 }

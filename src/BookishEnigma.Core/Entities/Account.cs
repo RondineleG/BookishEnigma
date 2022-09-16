@@ -6,7 +6,9 @@ namespace BookishEnigma.Core.Entities;
 [Table("Account")]
 public class Account
 {
-    public Guid AccountId { get; set; }
+    [Column("AccountId")]
+    public Guid Id { get; set; }
+
     [Required(ErrorMessage = "Date created is required")]
     public DateTime DateCreated { get; set; }
     [Required(ErrorMessage = "Account type is required")]

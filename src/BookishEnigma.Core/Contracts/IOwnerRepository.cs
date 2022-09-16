@@ -2,7 +2,7 @@
 
 namespace BookishEnigma.Core.Contracts;
 
-public interface IOwnerRepository : IRepositoryBase<Owner>
+public interface IOwnerRepository
 {
     IEnumerable<Owner> GetAllOwners();
 }
